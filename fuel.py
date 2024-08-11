@@ -4,7 +4,7 @@ def main():
 
 def convert(fraction):
     numerator, denominator = fraction.split('/')
-    return (numerator/denominator) * 100
+    return (int(numerator)/int(denominator)) * 100
 
 
 def gauge(percentage):
