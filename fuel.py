@@ -7,11 +7,8 @@ def main():
         else:
             break
 
-    gauge_output = gauge(percentage)
-    if gauge_output.isalpha():
-        print(gauge_output)
-    else:
-        print(f"{gauge_output}%")
+    print(gauge(percentage))
+    
 
 
 def convert(fraction):
@@ -37,7 +34,7 @@ def gauge(percentage):
     elif percentage < 2:
         return 'E'
     else:
-        return percentage
+        return f"{percentage}%"
 
 
 if __name__ == "__main__":
