@@ -18,3 +18,7 @@ def test_convert_value():
 
 def test_convert_over():
     assert fuel.convert('5/4') == None
+
+def test_gauge_full():
+    assert fuel.gauge(99) == 'F'
+    assert fuel.gauge(100) == 'F'
