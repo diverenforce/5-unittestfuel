@@ -14,4 +14,7 @@ def test_convert_zero():
 def test_convert_value():
     assert fuel.convert('yes/no') == None
     assert fuel.convert('please') == None
-    assert fuel.convert('lovethewind') == None
+    assert fuel.convert('1.5/3') == None
+
+def test_convert_over():
+    assert fuel.convert('5/4') == None
