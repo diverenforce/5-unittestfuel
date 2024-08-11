@@ -1,10 +1,20 @@
 def main():
-    theFraction = input('Fraction: ').strip()
+    while True:
+        theFraction = input('Fraction: ').strip()
 
 
 def convert(fraction):
     numerator, denominator = fraction.split('/')
-    return (int(numerator)/int(denominator)) * 100
+    
+    try:
+        percentage = int(numerator)/int(denominator) * 100
+    except (ValueError, ZeroDivisionError):
+        return
+    else:
+        if percentage > 100:
+            return
+        else:
+            return percentage
 
 
 def gauge(percentage):
