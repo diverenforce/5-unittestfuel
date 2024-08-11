@@ -26,3 +26,7 @@ def test_gauge_full():
 def test_gauge_empty():
     assert fuel.gauge(1) == 'E'
     assert fuel.gauge(0) == 'E'
+
+def test_gauge():
+    assert fuel.gauge(23) == '23%'
+    assert fuel.gauge(54) == '54%'
