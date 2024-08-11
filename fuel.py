@@ -19,7 +19,7 @@ def convert(fraction):
         if percentage > 100:
             return None
         else:
-            return percentage
+            return round(percentage)
 
 
 def gauge(percentage):
