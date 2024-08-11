@@ -1,6 +1,11 @@
 def main():
     while True:
         theFraction = input('Fraction: ').strip()
+        percentage = convert(theFraction)
+        if percentage == None:
+            continue
+        else:
+            break
 
 
 def convert(fraction):
@@ -9,10 +14,10 @@ def convert(fraction):
     try:
         percentage = int(numerator)/int(denominator) * 100
     except (ValueError, ZeroDivisionError):
-        return
+        return None
     else:
         if percentage > 100:
-            return
+            return None
         else:
             return percentage
 
