@@ -7,9 +7,18 @@ def main():
         else:
             break
 
+    gauge_output = gauge(percentage)
+    if gauge_output.isalpha():
+        print(gauge_output)
+    else:
+        print(f"{gauge_output}%")
+
 
 def convert(fraction):
-    numerator, denominator = fraction.split('/')
+    try:
+        numerator, denominator = fraction.split('/')
+    except ValueError:
+        return None
     
     try:
         percentage = int(numerator)/int(denominator) * 100
