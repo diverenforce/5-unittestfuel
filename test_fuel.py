@@ -22,3 +22,7 @@ def test_convert_over():
 def test_gauge_full():
     assert fuel.gauge(99) == 'F'
     assert fuel.gauge(100) == 'F'
+
+def test_gauge_empty():
+    assert fuel.gauge(1) == 'E'
+    assert fuel.gauge(0) == 'E'
