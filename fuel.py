@@ -2,7 +2,7 @@ def main():
     while True:
         theFraction = input('Fraction: ').strip()
         percentage = convert(theFraction)
-        if percentage == '':
+        if percentage == None:
             continue
         else:
             break
@@ -15,15 +15,15 @@ def convert(fraction):
     try:
         numerator, denominator = fraction.split('/')
     except ValueError:
-        return ''
+        return None
     
     try:
         percentage = int(numerator)/int(denominator) * 100
     except (ValueError, ZeroDivisionError):
-        return ''
+        return None
     else:
         if percentage > 100:
-            return ''
+            return None
         else:
             return round(percentage)
 
